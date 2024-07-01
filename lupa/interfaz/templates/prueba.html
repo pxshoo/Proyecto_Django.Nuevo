@@ -113,10 +113,10 @@
               <h5 class="card-title">{{ c.titulo }}</h5>
               <p class="card-text texto2">{{ c.descripcion }}</p>
               <p class="card-text price">{{ c.precio }}</p>
-              <a href="{{ c.url }}" class="btn btn-primary">Ver página de Steam</a>
+              <a href="{{ c.url }}" class="btn btn-primary" style="color: #007bff;">Ver página de Steam</a>
             </div>
             <div class="card-footer">
-              <a href="{% url 'modificar_carta' c.id %}" class="btn btn-info btn-sm">Modificar</a>
+              <a href="{% url 'modificar_carta' c.id %}" class="btn btn-info btn-sm" style="color: green;">Modificar</a>
               <form action="{% url 'eliminar_carta' c.id %}" method="post" style="display:inline;">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
